@@ -16,7 +16,7 @@ info file before you start solving the exercise tasks.
 task/tasks description, and a placeholder for your code.
 - Descriptions for every next exercise is located in /exercise-info/ folder
 - Open e1.js file and start writing function code in the "Your code goes here..." placeholder to achieve the goals described.
-- **!!! We don't have any restricted methods for this assignment. Please, pay attention to every exercise task description.**
+- **!!! We don't have any restricted methods for this assignment, unless any restriction is set for the function individually in the task description. Please, pay attention to every exercise task description.**
 - Once you are done, run the test command ```npm run test-1``` in the command line, where "1" is the current exercise number. This will start the test environment and show the passed and failed tests for the current code you have written.
 - If the test results have all tests passed (no red comments), consider it to be finished successfully, then switch to the next exercise file.
 - If any of the tests fails, refactor the code and run the test command after you've fixed the function.

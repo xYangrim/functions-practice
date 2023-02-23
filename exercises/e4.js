@@ -32,7 +32,7 @@ const personAge = function(personObject) {
  * isNameInArray(['Jon', 'Michael', 'Andrey'], 'James') => false;
  */
 
-const isNameInArray = (arr, name) => {
+const isNameInArray = function(arr, name) {
   return arr.includes(name);
 }
 
@@ -41,17 +41,18 @@ const isNameInArray = (arr, name) => {
  * The logTimer function takes a number as the arguments.
  * The function keeps logging the incremented value every second
  * Make sure you refactor ALL functions in the current example
- * Hint: There are two functions to refactor.
+ * !!! Hint: There are two functions to refactor !!!
  */
 
-const logSecondsUpToMax = function (max) {
+const logSecondsUpToMax = function(max) {
   let i = 0;
   const timer = setInterval(function() {
     if (i < max) {
-      console.log(i++);
+      console.log(++i);
+    } else {
+      clearInterval(timer);
     }
   }, 1000);
-  return true;
 }
 
 
