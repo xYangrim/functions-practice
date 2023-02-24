@@ -22,6 +22,7 @@ describe('getValuesWithCondition', () => {
   const case2 = { num1: 40, num2: 50 };
   const case3 = { num1: 20, num2: 30 };
   const case4 = { num1: 50, num2: 40 };
+  const case5 = { num1: 50, num2: 50 };
 
   it('All three function must exist', () => {
     expect(f.getValueWithConditionOne).instanceOf(Function);
@@ -51,6 +52,12 @@ describe('getValuesWithCondition', () => {
     expect(f.getValueWithConditionOne(case4.num1, case4.num2)).toEqual(180);
     expect(f.getValueWithConditionTwo(case4.num1, case4.num2)).toEqual(180);
     expect(f.getValueWithConditionThree(case4.num1, case4.num2)).toEqual(180);
+  });
+
+  it('All three functions must return 200 for 50 and 50', () => {
+    expect(f.getValueWithConditionOne(case5.num1, case5.num2)).toEqual(200);
+    expect(f.getValueWithConditionTwo(case5.num1, case5.num2)).toEqual(200);
+    expect(f.getValueWithConditionThree(case5.num1, case5.num2)).toEqual(200);
   });
 
   it('f.getValueWithConditionOne is NOT an arrow function', () => {
