@@ -36,7 +36,7 @@
 
 
 // Make the function call in the parentheses of the console.log statement.
-// Use room1, room2, room3 values as arguments for the function call
+// Use room1, room2, room3 variables as arguments for the function call
 const result = function () {
     console.log(/* replace this comment with a function call here... */);
 }
