@@ -35,13 +35,22 @@ describe('result', () => {
 });
 
 describe('totalRoomsArea', () => {
+    const rooms = {
+        room1: { first: [5, 9], second: [3, 16] },
+        room2: { first: [11, 8], second: [6, 12] },
+        room3: { first: [3, 9], second: [7, 4] },
+    }
     it('The test function should exist', () => {
         expect(f.totalRoomsArea).instanceOf(Function);
     });
-    it('The value from the final test function should return 83', () => {
-        const room1 = f.rectArea(4,6);
-        const room2 = f.rectArea(13, 3);
-        const room3 = f.rectArea(4, 8);
-        expect(f.totalRoomsArea(room1, room2, room3)).toEqual(95);
+    it('Should return a correct value for diferent values', () => {
+        const roomOneFirst = f.rectArea(rooms.room1.first[0], rooms.room1.first[1]);
+        const roomTwoFirst = f.rectArea(rooms.room2.first[0], rooms.room2.first[1]);
+        const roomThreeFirst = f.rectArea(rooms.room3.first[0], rooms.room3.first[1]);
+        const roomOneSecond = f.rectArea(rooms.room1.second[0], rooms.room1.second[1]);
+        const roomTwoSecond = f.rectArea(rooms.room2.second[0], rooms.room2.second[1]);
+        const roomThreeSecond = f.rectArea(rooms.room3.second[0], rooms.room3.second[1]);
+        expect(f.totalRoomsArea(roomOneFirst, roomTwoFirst, roomThreeFirst)).toEqual(160);
+        expect(f.totalRoomsArea(roomOneSecond, roomTwoSecond, roomThreeSecond)).toEqual(148);
     });
 });
